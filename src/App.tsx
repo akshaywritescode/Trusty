@@ -1,7 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+import { Landing } from "./pages/Landing";
+import { Dashboard } from "./pages/Dashboard";
+
+let isLoggedIn = false;
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Routes>
+        <Route path="/" element={isLoggedIn ? <Dashboard /> : <Landing />} />
+      </Routes>
     </>
   );
 }
