@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MailCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Label } from "@radix-ui/react-label";
 import { Input } from "@/components/ui/input";
