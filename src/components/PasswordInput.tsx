@@ -3,7 +3,7 @@ import { Input } from "./ui/input";
 import { Eye, EyeClosed } from "lucide-react";
 
 type PasswordInputProps = {
-  name: any;
+  name: string;
 };
 
 export const PasswordInput = ({ name }: PasswordInputProps) => {
