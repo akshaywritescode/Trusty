@@ -2,10 +2,12 @@ import { usePasswordVisibilty } from "@/hooks/usePasswordVisibilty";
 import { Input } from "./ui/input";
 import { Eye, EyeClosed } from "lucide-react";
 
+type PasswordInputProps = {
+  name: any;
+};
 
-
-export const PasswordInput = () => {
-    const [isVisible, toggleVisibility] = usePasswordVisibilty(false);
+export const PasswordInput = ({ name }: PasswordInputProps) => {
+  const [isVisible, toggleVisibility] = usePasswordVisibilty(false);
 
   return (
     <>
@@ -13,6 +15,7 @@ export const PasswordInput = () => {
         id="password"
         placeholder="Password"
         type={isVisible ? "text" : "password"}
+        {...name}
       />
       <div
         onClick={() => toggleVisibility()}
